@@ -4,6 +4,7 @@ class CreateSchools < ActiveRecord::Migration
       t.string :title
       t.date :start_year
       t.date :end_year
+      t.references :person
 
       t.timestamps null: false
     end

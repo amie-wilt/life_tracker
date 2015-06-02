@@ -4,6 +4,7 @@ class CreateLifeEvents < ActiveRecord::Migration
       t.string :title
       t.date :date
       t.text :description
+      t.references :person
 
       t.timestamps null: false
     end
