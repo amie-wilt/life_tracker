@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'person/name:string'
-
   resources :life_events
   resources :schools
+  resources :people
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
