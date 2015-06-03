@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'person/name:string'
+
   resources :life_events
   resources :schools
   root 'home#index'
