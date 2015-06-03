@@ -1,0 +1,15 @@
+<div class="people">
+  <div class="container">
+
+    <header>People</header>
+
+    <% @people.each do |person| %>
+        <div class="people-info">
+            <h1><%= person.name %></h1>
+            <p><%= person.schools %></p>
+            <p><%= person.life_events %></p>
+        </div>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="people">
+  <div class="container">
+
+      <% @people.each do |p| %>
+          <div class="person-info">
+            <h1><%= p.name %></h1>
+            <p><%= p.school %></p>
+            <p><%= p.life_event %></p>
+          </div>
+      <% end %>
+
+    </div>
+  </div>
