@@ -9,6 +9,7 @@ class SchoolsController < ApplicationController
   # GET /schools/1
   # GET /schools/1.json
   def show
+    @school = School.find(params[:id])
   end
 
   # GET /schools/new
@@ -68,6 +69,6 @@ class SchoolsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def school_params
-      params.require(:school).permit(:title, :start_year, :end_year)
+      params.require(:school).permit(:title, :start_year, :end_year, :person_id)
     end
 end

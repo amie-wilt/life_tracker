@@ -1,0 +1,11 @@
+<h1>This is my index ERB file for People</h1>
+
+
+
+<% @people.each do |person| %>
+    <%= person.name %>
+    <%= link_to 'Show', person %>
+<% end %>
+
+<p><%= link_to 'Life Events', life_events_url %></p>
+<p><%= link_to 'Schools', schools_url %></p>
