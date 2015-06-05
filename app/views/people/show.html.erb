@@ -1,13 +1,7 @@
-<div class="people">
-  <div class="container">
+<%= @person.name %>
 
-      <% @people.each do |p| %>
-          <div class="person-info">
-            <h1><%= p.name %></h1>
-            <p><%= p.school %></p>
-            <p><%= p.life_event %></p>
-          </div>
-      <% end %>
-
-    </div>
-  </div>
+<% @person.schools.each do |school| %>
+    <%= school.title %>
+    <%= school.start_year %>
+    <%= school.end_year %>
+<% end %>
