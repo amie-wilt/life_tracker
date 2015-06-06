@@ -1,6 +1,23 @@
 <h1>Welcome!</h1>
 
-<p>Welcome to Life Tracker! Track the schools you attended and important life events!</p>
+<p>Welcome to Life Tracker! Add yourself and keep track of the schools you've attended and significant life events!</p>
 
 
-<p><%= link_to 'Schools', schools_url %></p>
+
+<ul>
+  <% @people.each do |person| %>
+      <li>
+        <%= person.name %>
+        <% person.schools.each do |school| %>
+            <%= school.title %> <%= school.start_year %> <%= school.end_year %>
+        <% end %>
+        <% person.life_events.each do |event| %>
+            <%= event.title %> (<%= event.date %>)
+        <% end %>
+        <%= link_to 'Show', person %>
+      </li>
+  <% end %>
+</ul>
+
+
+<p><%= link_to 'Add Person', new_person_url %></p>

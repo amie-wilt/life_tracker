@@ -1,26 +1,12 @@
-<div class="people">
-  <div class="container">
+<h1>All the people tracking their lives!</h1>
 
-    <header>People</header>
+<p>If you haven't added yourself, <%= link_to 'join us now!', new_person_path %></p>
 
-    <% @people.each do |person| %>
-        <div class="people-info">
-            <h1><%= person.name %></h1>
-            <p><%= person.schools %></p>
-            <p><%= person.life_events %></p>
-        </div>
-    <% end %>
-
-  </div>
-</div>
-
-<h1>This is my index ERB file for People</h1>
-
-
-<% @people.each do |person| %>
-    <%= person.name %>
-    <%= link_to 'Show', person %>
-<% end %>
-
-<%= link_to 'New Life event', new_life_event_path %>
-<%= link_to 'New School', new_school_path %>
+<ul>
+  <% @people.each do |person| %>
+      <li>
+        <%= person.name %>
+        <%= link_to 'More...', person %>
+      </li>
+  <% end %>
+</ul>

@@ -19,7 +19,7 @@ class PeopleController < ApplicationController
   end
 
   def create
-    @person = Person.new(@person_params)
+    @person = Person.new(person_params)
 
     respond_to do |format|
       if @person.save

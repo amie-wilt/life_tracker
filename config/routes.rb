@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :schools
   resources :people
 
-  root 'people#index'
+  root 'home#index'
 
   # get '/people' => 'people#index'
   # get '/people/:id' => 'people#show', as: :person

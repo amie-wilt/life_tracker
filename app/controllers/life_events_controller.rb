@@ -5,6 +5,7 @@ class LifeEventsController < ApplicationController
   # GET /life_events.json
   def index
     @life_events = LifeEvent.all
+    @people = Person.all
   end
 
   # GET /life_events/1
@@ -28,7 +29,7 @@ class LifeEventsController < ApplicationController
 
     respond_to do |format|
       if @life_event.save
-        format.html { redirect_to @life_event, notice: 'Life event was successfully created.' }
+        format.html { redirect_to @people, notice: 'Life event was successfully created.' }
         format.json { render :show, status: :created, location: @life_event }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class LifeEventsController < ApplicationController
   def update
     respond_to do |format|
       if @life_event.update(life_event_params)
-        format.html { redirect_to @life_event, notice: 'Life event was successfully updated.' }
+        format.html { redirect_to @people, notice: 'Life event was successfully updated.' }
         format.json { render :show, status: :ok, location: @life_event }
       else
         format.html { render :edit }
@@ -69,6 +70,6 @@ class LifeEventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def life_event_params
-      params.require(:life_event).permit(:title, :year, :description, :person_id)
+      params.require(:life_event).permit(:title, :date, :description, :person_id)
     end
 end
