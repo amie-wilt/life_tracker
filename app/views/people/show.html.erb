@@ -1,33 +1,36 @@
-<header>Learn more about <%= @person.name %>!</header>
+<div class="container">
 
-<table>
-  <thead>
-  <tr>
-    <th>Person</th>
-    <th>School</th>
-    <th>Life Event</th>
-  </tr>
-  </thead>
-  <tbody>
-  <td><%= @person.name %></td>
-  <td>
-    <ul>
-      <% @person.schools.each do |school| %>
-          <li><%= school.title %> (<%= school.start_year %> to <%= school.end_year %>)</li>
-      <% end %>
-    </ul>
-  </td>
-  <td>
-    <ul>
-      <% @person.life_events.each do |event| %>
-          <li><%= event.title %> (<%= event.date %>)</li>
-      <% end %>
-    </ul>
-  </td>
-  </tbody>
-</table>
+  <header>Learn more about <%= @person.name %>!</header>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Person</th>
+      <th>School</th>
+      <th>Life Event</th>
+    </tr>
+    </thead>
+    <tbody>
+    <td><%= @person.name %></td>
+    <td>
+      <ul>
+        <% @person.schools.each do |school| %>
+            <li><%= school.title %> (<%= school.start_year %> to <%= school.end_year %>)</li>
+        <% end %>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <% @person.life_events.each do |event| %>
+            <li><%= event.title %> (<%= event.date %>)</li>
+        <% end %>
+      </ul>
+    </td>
+    </tbody>
+  </table>
 
 
-<%= link_to 'Add School', new_school_path %>
-<%= link_to 'Add Life Event', new_life_event_path %>
-<%= link_to 'Back', people_path %>
+  <button class="button"><%= link_to 'Add School', new_school_path %></button>
+  <button class="button"><%= link_to 'Add Life Event', new_life_event_path %></button>
+  <button class="button"><%= link_to 'Back', people_path %></button>
+</div>
