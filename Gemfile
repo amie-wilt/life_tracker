@@ -10,7 +10,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'foundation-rails'
-gem 'slim-rails'
 
 gem 'hirb'
 
