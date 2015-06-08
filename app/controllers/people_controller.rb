@@ -7,8 +7,8 @@ class PeopleController < ApplicationController
 
   def show
     @person = Person.find(params[:id])
-    @schools = @person.schools
-    @life_events = @person.life_events
+    @schools = @person.schools.order("created_at DESC")
+    @life_events = @person.life_events.order("created_at DESC")
   end
 
   def new
