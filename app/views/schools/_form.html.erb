@@ -25,7 +25,7 @@
       </div>
       <div class="field">
         <%= f.label :end_year %><br>
-        <%= f.date_select :end_year %>
+        <%= f.date_select :end_year, start_year: 1900 %>
       </div>
       <div class="actions">
         <%= f.submit %>
