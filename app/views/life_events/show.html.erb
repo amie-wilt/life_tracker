@@ -15,5 +15,5 @@
   <%= @life_event.description %>
 </p>
 
-<button class="button"><%= link_to 'Edit', edit_life_event_path(@life_event) %></button> |
-<button class="button"><%= link_to 'Back', life_events_path %></button>
+<%= link_to 'Edit', edit_life_event_path(@life_event), class: "button"  %> |
+<%= link_to 'To People', people_path(@people), class: "button"  %>]

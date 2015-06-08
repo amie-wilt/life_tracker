@@ -29,7 +29,7 @@ class LifeEventsController < ApplicationController
 
     respond_to do |format|
       if @life_event.save
-        format.html { redirect_to @people, notice: 'Life event was successfully created.' }
+        format.html { redirect_to @life_event, notice: 'Life event was successfully created.' }
         format.json { render :show, status: :created, location: @life_event }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class LifeEventsController < ApplicationController
   def update
     respond_to do |format|
       if @life_event.update(life_event_params)
-        format.html { redirect_to @people, notice: 'Life event was successfully updated.' }
+        format.html { redirect_to @life_event, notice: 'Life event was successfully updated.' }
         format.json { render :show, status: :ok, location: @life_event }
       else
         format.html { render :edit }

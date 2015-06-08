@@ -30,7 +30,7 @@
   </table>
 
 
-  <button class="button"><%= link_to 'Add School', new_school_path %></button>
-  <button class="button"><%= link_to 'Add Life Event', new_life_event_path %></button>
-  <button class="button"><%= link_to 'Back', people_path %></button>
+  <%= link_to 'Add School', new_school_path, class: "button" %>
+  <%= link_to 'Add Life Event', new_life_event_path, class: "button" %>
+  <%= link_to 'Back', people_path, class: "button" %>
 </div>

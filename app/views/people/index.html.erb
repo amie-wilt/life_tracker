@@ -1,12 +1,14 @@
-<h1>All the people tracking their lives!</h1>
+<div class="container">
+  <h1>All the people tracking their lives!</h1>
 
-<p>If you haven't added yourself, <%= link_to 'join us now!', new_person_path %></p>
+  <p>If you haven't added yourself, <%= link_to 'join us now!', new_person_path %></p>
 
-<ul>
-  <% @people.each do |person| %>
-      <li>
-        <%= person.name %>
-        <%= link_to 'More...', person %>
-      </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @people.each do |person| %>
+        <li>
+          <%= person.name %>
+          <%= link_to 'More...', person %>
+        </li>
+    <% end %>
+  </ul>
+</div>
